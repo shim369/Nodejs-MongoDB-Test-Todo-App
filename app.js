@@ -8,6 +8,13 @@ const port = 3000;
 
 app.use("/api/tasks", taskRoute);
 
-connectDB(process.env.MONGO_URI);
+const start = async () => {
+    try {
+        await connectDB(process.env.MONGO_URI);
+        app.listen(port, console.log("server ok!"));
+    } catch (err) {
+        console.log(err);
+    }
+};
 
-app.listen(port, console.log("server ok!"))
+start();
