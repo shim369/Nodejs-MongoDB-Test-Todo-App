@@ -20,7 +20,7 @@ const showTasks = async () => {
                 <a href="#" class="edit-link">
                     <i class="fas fa-edit"></i>
                 </a>
-                <button type="submit" class="delete-btn">
+                <button type="submit" class="delete-btn" data-id="${_id}">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
@@ -45,5 +45,19 @@ formDom.addEventListener("submit", async (event) => {
         taskInputDom.focus();
     } catch (error) {
         console.log(error);
+    }
+});
+
+tasksDom.addEventListener("click", async (event) => {
+    const element = event.target;
+    console.log(element.parentElement);
+    if(element.parentElement.classList.contains("delete-btn")) {
+        const id = element.parentElement.dataset.id;
+        try {
+            await axios.delete(`/api/tasks/${id}`);
+            showTasks();
+        } catch (error) {
+            console.log(error);
+        }
     }
 });
