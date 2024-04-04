@@ -40,10 +40,10 @@ header {
 .task-form {
     margin-top: 2rem;
     text-align: center;
-    background: #212121;
+    background: #1f1f1f;
     padding: 3rem;
     border-radius: 2px;
-    box-shadow: #302f2f 0px 8px 4px 0px;
+    box-shadow: #302f2f 0px 8px 0px 0px;
 
     @media (width <= 800px) {
         padding: 3rem 4%; 
@@ -100,7 +100,7 @@ header {
     background: #1f1f1f;
     padding: 2rem;
     margin-top: 2rem;
-    box-shadow: #302f2f 0px 8px 4px 0px;
+    box-shadow: #302f2f 0px 8px 0px 0px;
 
     h2 {
         font-size: 1rem;
