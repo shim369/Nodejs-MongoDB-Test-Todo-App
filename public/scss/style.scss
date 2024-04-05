@@ -84,12 +84,6 @@ header {
                 color: #606060;
             }
         }
-
-        .form-alert {
-            font-size: 1rem;
-            color: var(--yellow);
-            margin-top: 1rem;
-        }
     }
 
     button.form-submit {
@@ -111,7 +105,7 @@ header {
     }
 
     .edit-title {
-        color: #fff;
+        color: var(--yellow);
         margin-bottom: .3rem;
         
         span {
@@ -122,6 +116,7 @@ header {
     .edit-id-box {
         text-align: left;
         margin-bottom: 2rem;
+        color: #fff;
     }
 
     .edit-input-box {
@@ -156,8 +151,13 @@ header {
 
     .edit-checkbox-box {
         text-align: left;
-        input[type="checkbox"] {}
     }
+}
+
+.form-alert {
+    font-size: 1rem;
+    color: var(--yellow);
+    margin-top: 1rem;
 }
 
 .goto-top {
@@ -197,12 +197,20 @@ header {
         font-size: 1rem;
         font-weight: normal;
         color: #fff;
+    }
+    .fa-check-circle {
+        font-size: 1rem;
+        visibility: hidden;
+        color: var(--yellow);
+    }
+}
 
-        span {
-            i {
-                color: var(--yellow);
-            }
-        }
+.task-completed {
+    .fa-check-circle {
+        visibility: visible;
+    }
+    h2 {
+        color: #b5b5b5;
     }
 }
 
