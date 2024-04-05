@@ -93,6 +93,16 @@ header {
     }
 }
 
+.tasks {
+    margin-top: 3rem;
+    .empty-message {
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}
+
 .single-task {
     width: 100%;
     display: flex;
