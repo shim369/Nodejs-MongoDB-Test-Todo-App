@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+:root {
+    --yellow: #ffe432;
+    --light-black: #343434;
+    --black: #292929;
+    --dark-black: #212121;
+    --deep-black: #1f1f1f;
+    --light-gray: #9e9e9e;
+    --dark-gray: #5d5d5d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +17,7 @@
 }
 
 html {
-    background: #212121;
+    background: var(--dark-black);
 }
 
 body {
@@ -41,7 +51,7 @@ header {
 .task-form {
     margin-top: 2rem;
     text-align: center;
-    background: #1f1f1f;
+    background: var(--deep-black);
     padding: 3rem;
     border-radius: 2px;
     box-shadow: #302f2f 0px 8px 0px 0px;
@@ -61,12 +71,12 @@ header {
             padding: 1rem 1.2rem;
             text-align: left;
             color: #fff;
-            border-bottom: 1px solid #9e9e9e;
-            background: #292929;
+            border-bottom: 1px solid var(--light-gray);
+            background: var(--dark-black);
 
             &:focus {
-                background: #343434;
-                border-bottom: 1px solid #292929;
+                background: var(--light-black);
+                border-bottom: 1px solid var(--dark-black);
             }
 
             &::placeholder {
@@ -74,13 +84,19 @@ header {
             }
         }
 
+        .form-alert {
+            font-size: 1rem;
+            color: var(--yellow);
+            margin-top: 1rem;
+        }
+
         button {
             all: unset;
-            background: #ffe432;
+            background: var(--yellow);
             padding: 1rem 2rem;
             cursor: pointer;
             border-radius: 2px;
-            color: #5d5d5d;
+            color: var(--dark-gray);
             width: 20%;
             min-width: 80px;
             margin: 3rem auto 0;
@@ -96,7 +112,7 @@ header {
 .tasks {
     margin-top: 3rem;
     .empty-message {
-        color: #fff;
+        color: var(--yellow);
         text-align: center;
         font-size: 1rem;
     }
@@ -108,7 +124,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1f1f1f;
+    background: var(--deep-black);
     padding: 2rem;
     margin-top: 2rem;
     box-shadow: #302f2f 0px 8px 0px 0px;
@@ -120,7 +136,7 @@ header {
 
         span {
             i {
-                color: #ffe432;
+                color: var(--yellow);
             }
         }
     }
