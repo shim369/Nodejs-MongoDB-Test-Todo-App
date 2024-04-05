@@ -1,6 +1,7 @@
 const tasksDom = document.querySelector(".tasks");
 const formDom = document.querySelector(".task-form")
 const taskInputDom = document.querySelector(".task-input")
+const formAlertDom = document.querySelector(".form-alert")
 
 const showTasks = async () => {
     try {
@@ -50,6 +51,7 @@ formDom.addEventListener("submit", async (event) => {
         taskInputDom.focus();
     } catch (error) {
         console.log(error);
+        formAlertDom.innerHTML = "Please enter within 30 characters.";
     }
 });
 
