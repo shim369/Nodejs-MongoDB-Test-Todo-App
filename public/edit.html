@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Edit Task</h1>
+    </header>
+    <div class="wrapper">
+        <form class="task-form">
+            <div class="edit-id-box">
+                <div class="edit-title">Task ID</div>
+                <p class="task-edit-id"></p>
+            </div>
+            <div class="edit-input-box">
+                <label class="edit-title">
+                    <span>Name</span>
+                    <input type="text" name="name" class="task-edit-name" autocomplete="off">
+                </label>
+            </div>
+            <div class="edit-checkbox-box">
+                <label class="edit-title">
+                    <span>Completed/Unfinished</span>
+                    <input type="checkbox" name="completed" class="task-edit-completed">
+                </label>
+            </div>
+            <button type="submit" class="form-submit">Edit</button>
+        </form>
+        <a href="./" class="goto-top">Return Tasks</a>
+    </div>
+</body>
+
+</html>
