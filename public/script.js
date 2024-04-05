@@ -6,6 +6,11 @@ const showTasks = async () => {
     try {
         const {data: tasks} = await axios.get("/api/tasks");
 
+        if(tasks.length < 1) {
+            tasksDom.innerHTML = `<h2 class="empty-message">There are no tasks!</h2>`;
+            return;
+        }
+
         const allTasks = tasks.map((task) => {
             const { completed, _id, name } = task;
 
