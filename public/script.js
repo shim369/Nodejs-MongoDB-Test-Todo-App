@@ -48,11 +48,17 @@ formDom.addEventListener("submit", async (event) => {
         await axios.post("/api/tasks", {name: name});
         showTasks();
         taskInputDom.value = "";
+        formAlertDom.style.display = "block";
+        formAlertDom.textContent = "Added task!";
         taskInputDom.focus();
     } catch (error) {
         console.log(error);
-        formAlertDom.innerHTML = "Please enter within 30 characters.";
+        formAlertDom.style.display = "block";
+        formAlertDom.textContent = "Please enter within 30 characters.";
     }
+    setTimeout(() => {
+        formAlertDom.style.display = "none";
+    }, 3000);
 });
 
 tasksDom.addEventListener("click", async (event) => {
